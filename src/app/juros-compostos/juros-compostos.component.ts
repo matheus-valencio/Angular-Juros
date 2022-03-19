@@ -35,8 +35,10 @@ export class JurosCompostosComponent implements OnInit {
       items.push(this.vp * Math.pow(1 + this.j / 100, i));
       this.mes = i;
       console.log(this.mes);
+      console.log(items);
     }
-    console.log(items);
+
     return items;
   }
 }
+
