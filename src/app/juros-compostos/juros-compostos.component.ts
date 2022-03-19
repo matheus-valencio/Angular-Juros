@@ -20,25 +20,13 @@ export class JurosCompostosComponent implements OnInit {
   ngOnInit() {}
 
   getJurosCompostos() {
-    return this.vp * Math.pow(1 + this.j / 100, this.n);
-  }
-
-  teste() {
-    for (let i = 0; i < 3; i++) {
-      return 'Block statement execution no.' + i;
-    }
-  }
-
-  createRange() {
     var items = [];
     for (let i = 0; i <= this.n; i++) {
-      items.push(this.vp * Math.pow(1 + this.j / 100, i));
+      var valor = this.vp * Math.pow(1 + this.j / 100, i);
+      items.push(valor.toFixed(4));
       this.mes = i;
-      console.log(this.mes);
-      console.log(items);
     }
 
     return items;
   }
 }
-
