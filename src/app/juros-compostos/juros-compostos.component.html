@@ -1,0 +1,24 @@
+<h2>Juros Compostos</h2>
+<div>Valor presente (em R$):</div>
+<input type="number" step="0.01" [(ngModel)]="vp" />
+<div>Juros (em %):</div>
+<input type="number" step="0.01" [(ngModel)]="j" />
+<div>Período (em meses):</div>
+<input type="number" step="1" [(ngModel)]="n" />
+<h3>Valor futuro:</h3>
+<h4>R$ {{ getJurosCompostos() }}</h4>
+
+<div>{{ teste() }}</div>
+<table class="table">
+  <tr>
+    <th>MES</th>
+    <th>Valor</th>
+  </tr>
+  <tr *ngFor="let item of createRange(); index as i">
+    <td>{{ i }}</td>
+    <td></td>
+  </tr>
+</table>
+<ul>
+  <li></li>
+</ul>
